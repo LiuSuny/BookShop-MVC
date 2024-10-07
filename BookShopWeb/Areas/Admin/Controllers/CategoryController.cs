@@ -2,10 +2,13 @@
 using BookShop.DataAccess.Data;
 using Microsoft.AspNetCore.Mvc;
 using BookShop.DataAccess.Repository;
+using Microsoft.AspNetCore.Authorization;
+using BookShop.Utility;
 
 namespace BookShopWeb.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = SD.Role_Admin)]
     public class CategoryController : Controller
     {
 

@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace BookShop.Migrations
+namespace BookShop.DataAccess.Migrations
 {
     /// <inheritdoc />
     public partial class AddImageToTables : Migration
