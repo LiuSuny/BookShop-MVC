@@ -68,7 +68,6 @@ namespace BookShopWeb.Areas.Admin.Controllers
             return NotFound();
         }
 
-
         // Category? categoryFromDb = _db.Categories.Find(id);            
         //Category? categoryFromDb1 = _db.Categories.FirstOrDefault(u=>u.Id==id);
         //Category? categoryFromDb2 = _db.Categories.Where(u=>u.Id==id).FirstOrDefault();
