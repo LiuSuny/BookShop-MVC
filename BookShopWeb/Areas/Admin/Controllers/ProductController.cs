@@ -103,63 +103,7 @@ namespace BookShopWeb.Areas.Admin.Controllers
                 return View(productVM);
             }
         }
-        //public IActionResult Edit(int? id)
-        //{
-        //    if (id == null || id == 0)
-        //    {
-        //        return NotFound();
-        //    }
-        //    Product? productFromDb = _unitOfWork.Product.Get(u => u.Id == id);
-        //    //Product? productFromDb1 = _db.Categories.FirstOrDefault(u=>u.Id==id);
-        //    //Product? productFromDb2 = _db.Categories.Where(u=>u.Id==id).FirstOrDefault();
-        //    if (productFromDb == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    return View(productFromDb);
-        //}
-        //[HttpPost]
-        //public IActionResult Edit(Product obj)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        _unitOfWork.Product.Update(obj);
-        //        _unitOfWork.Save();
-        //        TempData["success"] = "Product updated successfully";
-        //        return RedirectToAction("Index");
-        //    }
-        //    return View();
-        //}
-
-        //public IActionResult Delete(int? id)
-        //{
-            
-        //        var productToBeDeleted = _unitOfWork.Product.Get(u => u.Id == id);
-        //       if (productToBeDeleted == null) 
-        //       {
-        //        return Json(new { success = false, message = "Error while deleting" });
-        //    }
-        //    Product? productFromDb = _unitOfWork.Product.Get(u => u.Id == id);
-        //    if (productFromDb == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    return View(productFromDb);
-        //}
-
-        //[HttpPost, ActionName("Delete")]
-        //public IActionResult DeletePOST(int? id)
-        //{
-        //    Product? obj = _unitOfWork.Product.Get(u => u.Id == id);
-        //    if (obj == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    _unitOfWork.Product.Remove(obj);
-        //    _unitOfWork.Save();
-        //    TempData["success"] = "Product deleted successfully";
-        //    return RedirectToAction("Index");
-        //}
+        
 
         #region API CALLS
         [HttpGet]
