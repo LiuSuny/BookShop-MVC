@@ -107,6 +107,7 @@ namespace BookShopWeb.Areas.Customer.Controllers
 				_unitOfWork.OrderDetail.Add(orderDetail);
 				_unitOfWork.Save();
 			}
+            //Added stripe payment logic
 			if (applicationUser.CompanyId.GetValueOrDefault() == 0)
 			{
                 //it is a regular customer account and we need to capture payment
@@ -137,7 +138,8 @@ namespace BookShopWeb.Areas.Customer.Controllers
                     options.LineItems.Add(sessionLineItem);
                 }
                 var service = new SessionService();
-                Session session = service.Create(options);
+                Session session = service.Create(options); //created our payment
+                //Next we update our payment status
                 _unitOfWork.OrderHeader.UpdateStripePaymentID(ShoppingCartVM.OrderHeader.Id, session.Id, session.PaymentIntentId);
                 _unitOfWork.Save();
                 Response.Headers.Add("Location", session.Url);
